@@ -14,17 +14,11 @@ public class App {
 
             boolean temCabecalho = false;
             String cabecalho = "║ Tabela de multiplicação de " + numero + " ║";
-            int comprimento = 0;
+            int comprimento = cabecalho.length();
 
             for(int i = 0; i < 11; i++) {
 
                 String linha = ("║  " + numero + " x " + i + " = " + numero*i);
-
-                if(cabecalho.length() > linha.length()) {
-                    comprimento = cabecalho.length();
-                } else {
-                    comprimento = linha.length();
-                }
 
                 //Cria o topo da tabuada, caso não tenha sido feita
                 if(!temCabecalho) {
@@ -48,9 +42,9 @@ public class App {
             // Trata os erros, identificados pelo "hashCode"
             int error = e.hashCode();
 
-            if(error == 1828972342) { //Caso o usuário ultrapasse o tamanho do 'int'
+            if(error == 81628611) { //Caso o usuário ultrapasse o tamanho do 'int'
                 System.out.println("\n É uma tabuada, Raio de sol,\n você não tem nem capacidade\n de ler esse número!");
-            } else if(error == 81628611) { //Caso o usuário não coloque um número
+            } else if(error == 1480010240) { //Caso o usuário não coloque um número
                 System.out.println("\n Você precisa digitar um número!");
             }
             
